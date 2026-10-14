@@ -1,0 +1,228 @@
+:root {
+    --negro: #000000;
+    --carbon: #1c1d1f;
+    --gris: #4a4b4d;
+    --amarillo: #f9dc4a;
+}
+
+body {
+    background: var(--negro);
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Nav */
+.navbar {
+    background: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gris);
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Header */
+.hero {
+    min-height: 60vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)),
+    url("https://i.redd.it/f7aqqm8j8uqb1.png") center / cover no-repeat, #d9d9d9;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-sw {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+}
+
+.btn-amarillo {
+    background: var(--amarillo);
+    color: var(--negro);
+    border: 1px solid var(--negro);
+}
+
+.btn-amarillo:hover {
+    background: #fff;
+    color: var(--negro);
+}
+
+.btn-negro {
+    background: var(--negro);
+    color: #fff;
+    border: 1px solid var(--gris);
+}
+
+.btn-negro:hover {
+    background: var(--gris);
+    color: #fff;
+}
+
+/* Colección */
+.coleccion {
+    background: var(--negro);
+}
+
+.caja-carrusel {
+    background: var(--gris);
+    border-radius: 20px;
+    padding: 1rem 3rem;
+}
+
+.video-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow .25s, transform .25s;
+}
+
+.video-card:hover {
+    border: 1px solid var(--amarillo);
+    transform: translateY(-4px);
+}
+
+.video-card video {
+    width: 100%;
+    display: block;
+    background: #e5e5e5;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.video-card p {
+    background: var(--carbon);
+    color: #fff;
+    margin: 0;
+    padding: .25rem;
+    text-align: center;
+}
+
+.video-card iframe {
+    width: 100%;
+    display: block;
+    border: 0;
+    background: #000;
+    aspect-ratio: 3 / 4;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 3rem;
+}
+
+.flecha {
+    color: var(--amarillo);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Separador sable de luz */
+.sable {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.sable-empunadura {
+    width: 110px;
+    height: 22px;
+    background: var(--gris);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.sable-hoja {
+    flex-grow: 1;
+    height: 24px;
+    background: var(--amarillo);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 15px 4px rgba(249, 220, 74, .7);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 1.2s cubic-bezier(.2, .8, .2, 1);
+}
+
+.sable.encendido .sable-hoja {
+    transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sable-hoja {
+        transform: scaleX(1);
+        transition: none;
+    }
+}
+
+/* Canvas */
+.seccion-canvas {
+    background: var(--carbon);
+}
+
+#lienzo {
+    background: var(--gris);
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Audio */
+.seccion-audio {
+    background: var(--amarillo);
+    color: var(--negro);
+}
+
+.caja-audio {
+    background: var(--negro);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+}
+
+.caja-audio audio {
+    width: 100%;
+}
+
+#visualizador {
+    width: 100%;
+    height: 90px;
+    display: block;
+    margin-bottom: .75rem;
+}
+
+/* Footer */
+footer {
+    background: var(--negro);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--amarillo);
+}
+
+.red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background: #fff;
+    color: var(--negro) !important;
+    font-size: 1.2rem;
+    transition: background .2s, transform .2s;
+}
+
+.red:hover {
+    background: var(--amarillo);
+    color: var(--negro) !important;
+    transform: translateY(-3px);
+}
+
+#carruselVideos .carousel-inner {
+    padding: 16px 12px;
+}
