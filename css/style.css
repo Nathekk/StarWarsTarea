@@ -3,6 +3,14 @@
     --carbon: #1c1d1f;
     --gris: #4a4b4d;
     --amarillo: #f9dc4a;
+    --amarilloLetras: #f9e602;
+}
+
+@font-face {
+    font-family: "Starwars";
+    src: url("../font/Starjedi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -59,8 +67,30 @@ body {
     color: #fff;
 }
 
+/* Sinopsis */
+.seccion-sinopsis {
+    background: var(--negro);
+}
+
+#cuadroSinopsis {
+    background: var(--gris);
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    display: block;
+}
+#cuadroSinopsis p {
+    padding: 50px 20px 20px 20px; /*top right bottom left */
+    font-family: "Starwars", sans-serif;
+    color: var(--amarilloLetras);
+    font-style: italic;
+    font-size: larger;
+    text-align: center;
+}
+
 /* Colección */
 .coleccion {
+    font-family: "Starwars", sans-serif;
     background: var(--negro);
 }
 
