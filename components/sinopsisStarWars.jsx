@@ -38,9 +38,9 @@ function IntroStarWars() {
                 ))}
 
                 <section className="intro">
-                    <p>long time ago, in a galaxy far, </p>
+                    <h1>long time ago, in a galaxy far, 
                     <br />
-                    <p>far away....</p>
+                    far away....</h1>
                 </section>
 
                 <div className="board">

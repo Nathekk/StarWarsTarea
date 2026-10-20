@@ -215,7 +215,9 @@ body {
 }
 
 /* Canvas */
-/* Canvas */
+#minijuego-nave{
+    font-family: "Starwars", sans-serif;
+}
 .seccion-canvas {
     background: var(--carbon);
 }
