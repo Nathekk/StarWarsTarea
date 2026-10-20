@@ -1,0 +1,61 @@
+.lector {
+    position: relative;
+}
+
+.lector-barra {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lector-barra button {
+    padding: 6px 12px;
+}
+
+.lector-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 1050;
+    width: 290px;
+    max-width: 90vw;
+    padding: 12px;
+    background: var(--carbon);
+    color: #fff;
+    border: 1px solid var(--gris);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.lector-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.lector-velocidad button {
+    flex: 0 0 auto;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+}
+
+.lector-velocidad span {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.lector button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.lector-ayuda {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #bbb;
+}
