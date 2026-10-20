@@ -1,15 +1,17 @@
 import React from "react";
+import { createRoot } from "react-dom/client";
+import BotonTamano from "./components/botonTamano";
+import BotonCambiaPanel from "./components/panelExplicativoAudio";
+import IntroStarWars from "./components/sinopsisStarWars";
 
-const App = () => {
-    return(
-        <>
-            <div className="App">
-                <header className="App-header">
-                    <DarkMode />
-                </header>
-            </div>
-        </>
-    )
-}
+createRoot(document.getElementById("botonTamano")).render(
+    <BotonTamano />
+);
 
-export default App;
+createRoot(document.getElementById("panelAudio")).render(
+    <BotonCambiaPanel />
+);
+
+createRoot(document.getElementById("sinopsis")).render(
+    <IntroStarWars />
+);

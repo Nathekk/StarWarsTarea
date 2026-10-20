@@ -1,0 +1,127 @@
+/* IntroStarWars.css */
+
+.contenedorSinopsis {
+    width: 100%;
+}
+
+.botonesSinopsis {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.botonesSinopsis button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--amarillo);
+    color: var(--negroLetras);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.introStarWars {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: var(--negroLetras);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.introStarWars .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+}
+
+.introStarWars .intro {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 1;
+    animation: intro 6s ease-out 1s forwards;
+    color: #0f57bb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: clamp(24px, 4vw, 42px);
+    line-height: 1.4;
+    text-align: center;
+    text-shadow:
+        0 0 2px #0f57bb,
+        0 0 5px #0f57bb,
+        0 0 10px rgba(0, 87, 255, 0.6);
+    opacity: 0;
+}
+
+.introStarWars .board {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: bold;
+    transform: perspective(300px) rotateX(15deg);
+    transform-origin: 50% 100%;
+}
+
+.introStarWars .content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    animation: scroll 40s linear 7s forwards;
+    font-size: larger;
+}
+
+.introStarWars .title,
+.introStarWars .subtitle {
+    text-align: center;
+    color: var(--amarilloLetras);
+}
+
+.introStarWars .intro {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.introStarWars .title {
+    font-size: clamp(30px, 5vw, 42px);
+}
+
+.introStarWars .subtitle {
+    font-size: clamp(28px, 4.5vw, 38px);
+}
+
+.introStarWars .content p {
+    color: var(--amarilloLetras);
+    font-size: clamp(26px, 4vw, 34px);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.introStarWars.parada *,
+.introStarWars.parada *::before,
+.introStarWars.parada *::after {
+    animation-play-state: paused !important;
+}
+
+@keyframes intro {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -300%; }
+}

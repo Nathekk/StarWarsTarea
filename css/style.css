@@ -25,7 +25,11 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--gris);
 }
-
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .navbar-brand img {
     height: 40px;
 }
@@ -66,14 +70,33 @@ body {
     background: var(--gris);
     color: #fff;
 }
+/* botones react */
+#botonTamano {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 2px;
+}
+
+#sinopsis .botonesSinopsis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 /* Sinopsis */
 .seccion-sinopsis {
     background: var(--negro);
 }
+#sinopsisTitulo{
+    font-family: "Starwars", sans-serif;
+}
 
 #cuadroSinopsis {
-    background: var(--gris);
+    background: var(--carbon);
     width: 100%;
     height: 260px;
     border-radius: 12px;
@@ -81,7 +104,7 @@ body {
 }
 #cuadroSinopsis p {
     padding: 50px 20px 20px 20px; /*top right bottom left */
-    font-family: "Starwars", sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: var(--amarilloLetras);
     font-style: italic;
     font-size: larger;
@@ -90,8 +113,10 @@ body {
 
 /* Colección */
 .coleccion {
-    font-family: "Starwars", sans-serif;
     background: var(--negro);
+}
+.coleccion h2{
+    font-family: "Starwars", sans-serif;
 }
 
 .caja-carrusel {
@@ -199,13 +224,16 @@ body {
 /* Audio */
 .seccion-audio {
     background: var(--amarillo);
-    color: var(--negro);
+    color: #fff;
+    padding: 1.5rem 2rem;
 }
 
 .caja-audio {
     background: var(--negro);
     border-radius: 30px;
     padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: margin-bottom 0.8s ease;
 }
 
 .caja-audio audio {
@@ -217,6 +245,33 @@ body {
     height: 90px;
     display: block;
     margin-bottom: .75rem;
+}
+
+.caja-audio.audio-reproduciendo {
+    margin-bottom: 1rem;
+}
+
+/* Texto que aparece al reproducir el audio */
+.textoAudio {
+    color: #fff;
+    background: var(--negro);
+    padding: 1.5rem;
+    border-radius: 12px;
+    line-height: 1.6;
+    text-align: center;
+    animation: aparecerTexto 1s ease forwards;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer */
