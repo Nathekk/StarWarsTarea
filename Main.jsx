@@ -1,17 +1,21 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import BotonTamano from "./components/botonTamano";
 import BotonCambiaPanel from "./components/panelExplicativoAudio";
 import IntroStarWars from "./components/sinopsisStarWars";
+import LectorPantalla from "./components/lectorPantalla";
 
 createRoot(document.getElementById("botonTamano")).render(
-    <BotonTamano />
+    <BotonTamano/>
 );
 
 createRoot(document.getElementById("panelAudio")).render(
-    <BotonCambiaPanel />
+    <BotonCambiaPanel/>
 );
 
 createRoot(document.getElementById("sinopsis")).render(
-    <IntroStarWars />
+    <IntroStarWars/>
 );
+
+
+createRoot(document.getElementById("lectorPantalla")).render(<LectorPantalla/>);

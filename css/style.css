@@ -25,11 +25,13 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--gris);
 }
+
 .navbar-brand {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .navbar-brand img {
     height: 40px;
 }
@@ -70,11 +72,12 @@ body {
     background: var(--gris);
     color: #fff;
 }
+
 /* botones react */
 #botonTamano {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: center;
     gap: 2px;
 }
@@ -91,7 +94,8 @@ body {
 .seccion-sinopsis {
     background: var(--negro);
 }
-#sinopsisTitulo{
+
+#sinopsisTitulo {
     font-family: "Starwars", sans-serif;
 }
 
@@ -102,9 +106,10 @@ body {
     border-radius: 12px;
     display: block;
 }
+
 #cuadroSinopsis p {
     padding: 50px 20px 20px 20px; /*top right bottom left */
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--amarilloLetras);
     font-style: italic;
     font-size: larger;
@@ -115,7 +120,8 @@ body {
 .coleccion {
     background: var(--negro);
 }
-.coleccion h2{
+
+.coleccion h2 {
     font-family: "Starwars", sans-serif;
 }
 
@@ -321,4 +327,11 @@ footer a:hover {
 
 #carruselVideos .carousel-inner {
     padding: 16px 12px;
+}
+
+#lectorPantalla {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 8px;
 }
