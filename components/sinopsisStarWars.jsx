@@ -38,15 +38,15 @@ function IntroStarWars() {
                 ))}
 
                 <section className="intro">
-                    A long time ago, in a galaxy far,
+                    <p>long time ago, in a galaxy far, </p>
                     <br />
-                    far away....
+                    <p>far away....</p>
                 </section>
 
                 <div className="board">
                     <div className="content">
-                        <p className="title">Episode III</p>
-                        <p className="subtitle">LA VENGANZA DE LOS SITH</p>
+                        <h2 className="title">Episode III</h2>
+                        <h3 className="subtitle">LA VENGANZA DE LOS SITH</h3>
                         <br />
                         <p>
                             ¡Guerra! La República se desmorona bajo los ataques del despiadado Conde Dooku, señor de los Sith. Hay héroes en ambos bandos. El mal está por doquier.
